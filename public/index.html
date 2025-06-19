@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Destruct Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Self-Destruct Chat</h1>
+
+        <!-- Home Screen UI -->
+        <section id="home-screen">
+            <h2>Create a New Message</h2>
+            <textarea id="message-input" placeholder="Type your secret message here..." rows="6"></textarea>
+
+            <div class="expiry-options">
+                <label for="expiry-duration-input">Expire After:</label>
+                <div class="duration-input-group">
+                    <input type="number" id="expiry-duration-input" value="10" min="1">
+                    <select id="expiry-unit-select">
+                        <option value="seconds">Seconds</option>
+                        <option value="minutes" selected>Minutes</option>
+                        <option value="hours">Hours</option>
+                    </select>
+                </div>
+                <div class="no-time-limit-option">
+                    <input type="checkbox" id="no-time-limit-checkbox">
+                    <label for="no-time-limit-checkbox">No time limit (read once only)</label>
+                </div>
+            </div>
+
+            <button id="generate-link-btn">Generate One-Time Link</button>
+
+            <div id="result-area">
+                <!-- Link will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Message View Screen UI -->
+        <section id="message-view-screen" style="display: none;">
+            <div id="message-card">
+                <p id="displayed-message"></p>
+            </div>
+            <p id="status-message"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
