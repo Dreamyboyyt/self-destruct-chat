@@ -20,8 +20,8 @@
       "dest": "server.js"
     },
     {
-      "src": "/read/(.*)",
-      "dest": "server.js"
+      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico))$",
+      "dest": "/public/$1"
     },
     {
       "src": "/(.*)",
